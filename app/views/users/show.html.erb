@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SimpleMessagesApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="ui grid">
+    <div class="row">
+      <div class="fourteen wide centered column">
+        <h2 class="ui header">
+          <i class="mail icon"></i>
+          <div class="content profile-home-button">
+            Hi, <%= current_user.first_name %>!
+          </div>
+        </h2>
+        <div class="ui purple inverted menu">
+          <i class="home icon"></i><%= link_to "Home", root_path, class: "item" %> </br>
+              <%= link_to "Mailbox", conversations_path, class: "item" %></br>
+              <%if current_user.admin?%>
+              <%= link_to 'Add Class Pictures', new_picture_path, class: "item" %></br>
+              <%= link_to 'Add An Assignment', new_meeting_path, class: "item" %>
+              <%end%>
+
+        </div>
+
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</body>
+</html>
+
+<!-- <%if current_user.try(:superadmin_role)%>
+  <%= link_to 'Terminate User', user_path(@user.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+<%end%> -->

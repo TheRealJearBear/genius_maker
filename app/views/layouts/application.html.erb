@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GeniusMaker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_pack_tag 'application' %>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <nav class="top-bar">
+    <ul class="title-area">
+      <li class="name">
+        <h1 class="title-title"><a href="/">GeniusMaker</a></h1>
+      </li>
+    </ul>
+
+    <section class="top-bar-section">
+      <ul class="right">
+        <%- if current_user -%>
+        <li class="my-profile"><%= link_to 'My Profile', user_path(current_user) %></li>
+        <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+        <%- else -%>
+        <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+        <li><%= link_to 'Sign In', new_user_session_path %></li>
+        
+        <%- end -%>
+      </ul>
+    </section>
+  </nav>
+
+  <%- flash.each do |key, value| -%>
+    <div class="flash flash-<%= key %>">
+      <%= value %>
+    </div>
+  <%- end -%>
+
+  <%= yield %>
+
+
+  <%= javascript_include_tag 'application' %>
+  <%= yield :extra_footer %>
+</body>
+</html>

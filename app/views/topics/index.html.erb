@@ -1,0 +1,15 @@
+<% topic_lessons = [] %>
+<% topic_lessons << @topics.first %>
+<% @topics.each do |topic| %>
+    <% if topic_lessons.last.title != (topic.title) %>
+    <% topic_lessons << topic %>
+    <% end %>
+<% end %>
+
+<ul class="topic-tile-list">
+  <% topic_lessons.each do |topic| %>
+    <div class="topic-tile">
+      <p class="topic-button"><%= link_to "#{topic.title}", topic_path(topic) %></p>
+    </div>
+  <% end %>
+</ul>

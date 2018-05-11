@@ -1,0 +1,275 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require foundation_and_overrides
+
+ */
+body {
+  background: #dfe3eb;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+p {
+  font-family: 'Merriweather', serif;
+  background: #3d70b2;
+  width: 75%;
+  box-shadow: 3px 3px 5px 3px rgba(0,0,0,0.3);
+  margin: 1rem auto;
+  padding: .5rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* p:hover,
+p:active {
+  box-shadow: 5px 5px 7px 5px rgba(0,0,0,0.3);
+  background: #5596e6;
+} */
+
+.top-bar {
+  background: #333333;
+  border-bottom: 1px solid black;
+  height: 45px;
+}
+
+.right li a {
+
+  background: #f5ce28;
+}
+
+.video-tile-maker {
+  border: 0.5px solid black;
+  margin: auto;
+  margin-top: 1rem;
+  margin: auto;
+  background: #ffffff;
+  box-shadow: 5px 5px 7px 5px rgba(0,0,0,0.3);
+  width: 85%;
+}
+
+#video-tile__title {
+  font-size: .8rem;
+  width: 90%;
+}
+
+#video-tile__description {
+  font-size: .7rem;
+  width: 90%;
+  background: #5596e6;
+}
+
+#videoModalTitle {
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.nasa-tile-maker {
+  border: 0.5px solid black;
+  margin: 1rem auto;
+  background: #b3fff0;
+  box-shadow: 5px 5px 7px 5px rgba(0,0,0,0.3);
+  width: 85%;
+}
+
+#nasa-tile__title {
+  font-size: 1rem;
+}
+
+#nasa-tile__date {
+  font-size: .7rem;
+}
+
+#nasa-tile__explanation {
+  font-size: .85rem;
+  width: 95%
+}
+
+#nasa-tile__copyright{
+  font-size: .7rem;
+}
+
+#nasa-title {
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  font-size: 1rem;
+}
+
+.home-button {
+  font-family: 'Merriweather', serif;
+  background: #3d70b2;
+  border: 0px solid black;
+  width: 80%;
+  box-shadow: 3px 3px 5px 3px rgba(0,0,0,0.3);
+  margin: 1rem auto;
+  padding: .5rem;
+  text-align: center;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+@media (min-width: 52rem) {
+  .home-button {
+    display: inline-block;
+    width: 23%;
+    max-width: 200px;
+    height: 200px;
+    vertical-align: bottom;
+    font-size: .8rem;
+  }
+  .home-button img {
+    width: 150px;
+    height: 125px;
+    align-self: baseline;
+  }
+}
+
+@media (min-width: 50rem) {
+  .button-tiles {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+}
+.home-button a {
+  color: black;
+}
+
+.home-button:hover,
+.homebutton:active {
+  color: blue;
+  box-shadow: 5px 5px 7px 5px rgba(0,0,0,0.3);
+  border: 0px solid black;
+  background: #5596e6;
+}
+
+.home-button a:active,
+.home-button a:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.topic-button {
+  max-width: 500px;
+}
+
+.topic-button > a {
+  color: black;
+}
+
+.reg-form {
+  width: 80%;
+  margin: auto;
+}
+
+.sign-up-title {
+  font-family: 'Merriweather', serif;
+  text-align: center;
+}
+
+.profile-home-button {
+  font-family: 'Merriweather', serif;
+  text-align: center;
+}
+
+.item {
+  font-family: 'Merriweather', serif;
+  background: #3d70b2;
+  box-shadow: 3px 3px 5px 3px rgba(0,0,0,0.3);
+  margin: 1rem auto;
+  width: 75%;
+  min-width: 150px;
+  padding: .5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  display: block;
+  color: black;
+}
+
+.item > p {
+  background: white;
+}
+
+#message-box {
+  border: 1px solid black;
+  background: #5596e6;
+}
+
+#topic-titlish {
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  font-size: 1.2rem;
+}
+
+#topic-descriptionish {
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  font-size: .8rem;
+}
+
+.mailbox-title {
+  text-align: center;
+}
+
+#message-box {
+  width: 250px;
+  margin-bottom: 4px;
+  margin-left: 4px;
+  padding-left: 4px;
+}
+
+.message-content {
+  margin-left: 4px;
+}
+
+.ui {
+  width: 90%;
+  max-width: 550px;
+}
+
+.ul {
+  margin-left: none !important;
+}
+
+.image-in-scroll {
+  width: 90%;
+  margin: 5%;
+  text-align: center;
+}
+
+.title-tile {
+  max-width: 400px;
+  font-size: 1.2rem;
+  color: black;
+
+}
+
+.title-tile:hover {
+    background: #3d70b2;
+    box-shadow: 3px 3px 5px 3px rgba(0,0,0,0.3);
+    cursor: auto;
+}
+
+.title-title > a {
+  color: black;
+}
+
+.top-bar {
+  overflow: initial;
+}
+
+.top-bar-section ul li {
+
+}

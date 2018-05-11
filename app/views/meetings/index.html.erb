@@ -1,0 +1,10 @@
+<%= month_calendar meetings: @meetings do |date, meetings| %>
+  <%= date.day %>
+  <% meetings.each do |meeting| %>
+    <div>
+      <%= meeting.start_time %>
+      <%= meeting.title %>
+    </div>
+  <% end %>
+
+<% end %>

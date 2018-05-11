@@ -1,0 +1,43 @@
+<div class="ui segment">
+  <h3 class="mailbox-title"> <%= current_user.first_name %>'s Mailbox</h3>
+
+  <div class="ui list">
+    <div class="item">
+      <% @conversations.each do |conversation| %>
+        <% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>
+          <% if conversation.sender_id == current_user.id %>
+            <% recipient = User.find(conversation.recipient_id) %>
+          <% else %>
+            <% recipient = User.find(conversation.sender_id) %>
+          <% end %>
+          <p><%= link_to recipient.first_name, conversation_messages_path(conversation)%> <%= recipient.last_name %></p>
+
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+<div class="ui segment">
+  <%if current_user.admin?%>
+  <h3 class="mailbox-title">All Users</h3>
+  <div class="ui list">
+  </div>
+    <% @users.each do |user| %>
+        <% if user.id != current_user.id && !user.admin %>
+          <div class="item">
+            <%= user.first_name %> <%= user.last_name %> </br> <%= link_to 'Message me!', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post'%>
+          </div>
+        <% end %>
+      <% end %>
+  <% else %>
+    <% @users.each do |user| %>
+      <% if user.admin %>
+        <div class="item">
+          Contact the Teacher: <%= user.first_name %> <%= user.last_name %> </br> <%= link_to 'Click here to send a message!', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post'%>
+        </div>
+      <% end %>
+    <% end %>
+  <%end%>
+</div>

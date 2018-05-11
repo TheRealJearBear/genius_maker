@@ -1,0 +1,17 @@
+<% @videos.each do |video| %>
+  <div class="video-tile-maker">
+    <p id="video-tile__title"><%= video.title %></p>
+    <p id="video-tile__description"><%= video.description %></p>
+    <p id="video-tile__youtube_id"><%= video.youtube_id %></p>
+    <p id="video-tile__lesson_slug"><%= video.lesson_slug %></p>
+    <p><a href="#" data-reveal-id="videoModal<%= video.youtube_id %>" className="radius button"><%= video.title %>&hellip;</a></p>
+    <div id="videoModal<%= video.youtube_id %>" class="reveal-modal medium" data-reveal aria-labelledby="videoModalTitle" aria-hidden="true" role="dialog">
+      <h2 id="videoModalTitle">Khan Video</h2>
+      <div class="flex-video widescreen vimeo">
+        <iframe width="1280" height="720" src="https://www.youtube-nocookie.com/embed/<%= video.youtube_id %>?rel=0" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+    </div>
+  </div>
+<% end %>

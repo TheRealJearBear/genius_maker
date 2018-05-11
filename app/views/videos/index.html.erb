@@ -1,0 +1,29 @@
+<!-- <%= form_tag(videos_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Videos" %>
+    <%= submit_tag "Search", :name => nil %>
+<% end %>
+
+<% if @videos.blank? %>
+  <h4>There are no videos containing the term <%= params[:search] %>.</h4>
+<% end %> -->
+<li class="my-profile"><%= link_to '3rd Grade Strategies', video_path("cc-3rd-strategies-for-adding-two-and-three-digit-numbers") %></li>
+
+
+
+<% @videos.each do |video| %>
+  <div class="video-tile-maker">
+    <p id="video-tile__title"><%= video.title %>: </br> <%= video.description %></p>
+    <p><a href="#" data-reveal-id="videoModal<%= video.youtube_id %>" className="radius button"><%= video.title %>&hellip;</a></p>
+    <div id="videoModal<%= video.youtube_id %>" class="reveal-modal medium" data-reveal aria-labelledby="videoModalTitle" aria-hidden="true" role="dialog">
+      <h2 id="videoModalTitle">Khan Video</h2>
+      <div class="flex-video widescreen vimeo">
+        <iframe width="1280" height="720" src="https://www.youtube-nocookie.com/embed/<%= video.youtube_id %>?rel=0" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+    </div>
+  </div>
+<% end %>
+
+
+<!-- <div id="app"></div> -->

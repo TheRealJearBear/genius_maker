@@ -1,0 +1,19 @@
+<h2 id="topic-titlish"><%= @topic.first.title %></h2>
+<h3 id="topic-descriptionish"><%= @topic.first.description %></h3>
+
+
+<% @video_array.each do |video| %>
+  <div class="video-tile-maker">
+    <p id="video-tile__title"><%= video.title %>:</p>
+    <p><a href="#" data-reveal-id="videoModal<%= video.youtube_id %>" className="radius button"><%= image_tag "khan-academy-1.jpg" %></a></p>
+    <div id="videoModal<%= video.youtube_id %>" class="reveal-modal medium" data-reveal aria-labelledby="videoModalTitle" aria-hidden="true" role="dialog">
+      <h3 id="videoModalTitle"><%= video.title %></h3>
+      <div class="flex-video widescreen vimeo">
+        <iframe width="1280" height="720" src="https://www.youtube-nocookie.com/embed/<%= video.youtube_id %>?rel=0" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+    </div>
+    <p id="video-tile__description"><%= video.description %></p>
+  </div></br>
+<% end %>

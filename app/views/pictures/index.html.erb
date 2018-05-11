@@ -1,0 +1,9 @@
+<ul class="picture-tile-list">
+  <% @pictures.each do |picture| %>
+    <div class="nasa-tile-maker">
+      <p><%= picture.title %></p>
+      <img class="image-in-scroll" src="<%= picture.photo %>" alt='class photo'>
+      <p><%= picture.explanation %></p>
+    </div>
+  <% end %>
+</ul>

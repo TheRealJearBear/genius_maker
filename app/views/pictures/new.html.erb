@@ -1,0 +1,36 @@
+<% require 'carrierwave/orm/activerecord' %>
+<h1 class="sign-up-title">New Picture Form</h1>
+
+<% if @picture.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@picture.errors.count, "error") %> prohibited this picture from being saved:</h2>
+
+    <ul>
+      <% @picture.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for(@picture) do |f| %>
+  <div class="reg-form">
+    <div>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+    </div>
+
+    <div>
+    <%= f.label :explanation %><br />
+    <%= f.text_field :explanation %>
+    </div>
+
+
+    <div>
+      <%= f.label :photo %><br>
+      <%= f.file_field :photo %>
+    </div>
+
+    <%= f.submit "Add Picture"%>
+  </div>
+<% end %>
