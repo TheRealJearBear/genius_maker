@@ -92,7 +92,7 @@ conn = Faraday.new(:url => 'https://api.nasa.gov') do |faraday|
   faraday.headers['Content-Type'] = 'application/json'
   faraday.response :json, :content_type => /\bjson$/
 end
-resp = conn.get "/planetary/apod?api_key=#{ENV["NASA_KEY_TOKEN"]}"
+resp = conn.get "/planetary/apod?api_key=ENV["NASA_KEY_TOKEN"]"
 
 
 nasa_data = {
