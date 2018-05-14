@@ -105,3 +105,5 @@ nasa_data = {
 
 
 Nasa.find_or_create_by!({ copyright: nasa_data[:copyright], date: nasa_data[:date], explanation: nasa_data[:explanation], title: nasa_data[:title], url: nasa_data[:url] })
+
+User.find_or_create_by!({ first_name: "Erin", last_name: "McDonald", email: "erin@gmail.com", admin: "true", password: "123456", })
