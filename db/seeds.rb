@@ -7,7 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faraday'
 require 'faraday_middleware'
-require 'pry'
 
 conn = Faraday.new(:url => 'http://www.khanacademy.org') do |faraday|
   faraday.request  :url_encoded             # form-encode POST params
