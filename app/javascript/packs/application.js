@@ -12,10 +12,13 @@ import ReactDOM from 'react-dom'
 import App from '../react/App'
 
 document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(
-    <App />,
-    document.getElementById('app')
-  );
+  const appContainer = document.getElementById('app')
+  if(appContainer){
+    ReactDOM.render(
+      <App />,
+      appContainer
+    );  
+  }
 })
 
 console.log('React appears to be working, at least.')

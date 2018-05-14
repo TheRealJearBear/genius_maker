@@ -42,12 +42,12 @@ p:active {
 .top-bar {
   background: #333333;
   border-bottom: 1px solid black;
-  height: 45px;
+  height: 47px;
 }
 
 .right li a {
-
-  background: #f5ce28;
+  border: 1px solid #333333;
+  background: #5596e6;
 }
 
 .video-tile-maker {
@@ -58,6 +58,7 @@ p:active {
   background: #ffffff;
   box-shadow: 5px 5px 7px 5px rgba(0,0,0,0.3);
   width: 85%;
+  max-width: 750px;
 }
 
 #video-tile__title {
@@ -87,6 +88,7 @@ p:active {
 
 #nasa-tile__title {
   font-size: 1rem;
+  color: white;
 }
 
 #nasa-tile__date {
@@ -167,6 +169,11 @@ p:active {
 
 .topic-button > a {
   color: black;
+}
+
+.topic-button > a:hover,
+.topic-button > a:active {
+  color: white;
 }
 
 .reg-form {
@@ -266,10 +273,34 @@ p:active {
   color: black;
 }
 
-.top-bar {
-  overflow: initial;
+.top-bar-section{
+  /* width:40%; */
+  /* float: right; */
+  margin: 0;
+  padding: 0;
+  border: 0
 }
 
-.top-bar-section ul li {
+.simple-calendar {
+  margin: auto;
+}
 
+.table {
+  margin: auto;
+}
+
+.calendar-heading {
+  text-align: center;
+}
+
+.homework-title {
+  color: white;
+  width: 60%;
+  min-width: 280px;
+}
+
+.homework-description {
+  background: #5596e6;
+  width: 65%;
+  min-width: 310px;
 }
