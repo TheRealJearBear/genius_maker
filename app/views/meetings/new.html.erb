@@ -25,9 +25,14 @@
     </div>
 
 
+    <!-- <div>
+      <%= f.label "Due date *(please enter yyyy-mm-dd)" %><br>
+      <%= select_date Date.today, prefix: :start_date %>
+    </div> -->
+
     <div>
-      <%= f.label :start_time %><br>
-      <%= f.text_field :start_time %>
+        <%= f.label :start_date %>
+        <%= f.date_field :start_time, required: true %>
     </div>
 
     <%= f.submit "Add Meeting"%>
