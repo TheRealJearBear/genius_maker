@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :users
     resources :topics
     resources :meetings
+    resources :weathers
     resources :conversations do
       resources :messages
     end

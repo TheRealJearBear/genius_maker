@@ -304,3 +304,8 @@ p:active {
   width: 65%;
   min-width: 310px;
 }
+
+.map-embed {
+  width: 95%;
+  margin: auto;
+}
