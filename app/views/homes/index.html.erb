@@ -1,9 +1,8 @@
 <p class="title-tile"><%= image_tag "erin.png" %></br></br><%= t "genius.title" %></p>
-
 <!-- <p> Welcome to Ms. McDonald's Genius Maker </p> -->
 <div class="button-tiles">
-<p class="home-button"><%= link_to 'Khan Academy Videos', topics_path %></br></br><%= image_tag "khan.jpg" %></p>
-<p class="home-button"><%= link_to 'Nasa Picture of the Day', nasas_path %></br></br><%= image_tag "NASA-space-science.jpg" %></p>
-<p class="home-button"><%= link_to 'See Class Pictures', pictures_path %></br></br><%= image_tag "classroom.jpg" %></p>
-<p class="home-button"><%= link_to 'Calendar', meetings_path %></br></br><%= image_tag "calendar-image.jpg" %></p>
+<p class="home-button"><%= link_to I18n.t("genius.khan"), topics_path %></br></br><%= image_tag "khan.jpg" %></p>
+<p class="home-button"><%= link_to I18n.t("genius.nasa"), nasas_path %></br></br><%= image_tag "NASA-space-science.jpg" %></p>
+<p class="home-button"><%= link_to I18n.t("genius.classroom"), pictures_path %></br></br><%= image_tag "classroom.jpg" %></p>
+<p class="home-button"><%= link_to I18n.t("genius.calendar"), meetings_path %></br></br><%= image_tag "calendar-image.jpg" %></p>
 </div>
