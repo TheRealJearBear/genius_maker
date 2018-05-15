@@ -7,7 +7,7 @@ import NasaShowContainer from './containers/NasaShowContainer'
 const App = props => {
   return (
       <Router history={browserHistory}>
-          <Route path='/nasas' component={NasaShowContainer} />
+          <Route path='/(:locale)/nasas' component={NasaShowContainer} />
       </Router>
   )
 }
