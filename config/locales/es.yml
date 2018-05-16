@@ -7,3 +7,11 @@ es:
     classroom: "Fotos de la clase"
     calendar: "Calendario"
     emoji: "Emoji Tiempo"
+  navbar:
+    genius: "GeniusMaker Inicio"
+    in: "Registrarse"
+    out: "Desconectar"
+    up: "Regístrate"
+    profile: "Mi perfil"
+    english: "Cambiar a inglés"
+    spanish: "Cambiar al español"

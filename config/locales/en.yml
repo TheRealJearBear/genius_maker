@@ -37,3 +37,11 @@ en:
     classroom: "Classroom Pictures"
     calendar: "Calendar"
     emoji: "Emoji Weather"
+  navbar:
+    genius: "GeniusMaker Home"
+    in: "Sign In"
+    out: "Sign Out"
+    up: "Sign Up"
+    profile: "My Profile"
+    english: "Switch to English"
+    spanish: "Switch to Spanish"

@@ -16,7 +16,7 @@
   <nav class="top-bar" data-topbar role="navigation">
     <ul class="title-area">
       <li class="name">
-        <h1 class="title-title"><%= link_to 'GeniusMaker', root_path %></h1>
+        <h1 class="title-title"><%= link_to I18n.t("navbar.genius"), root_path %></h1>
       </li>
       <li class="toggle-topbar menu-icon"><a href=""><span></span></a></li>
     </ul>
@@ -24,18 +24,18 @@
     <section class="top-bar-section">
       <ul class="right">
         <%- if current_user -%>
-          <li class="my-profile"><%= link_to 'My Profile', user_path(current_user) %></li>
-          <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+          <li class="my-profile"><%= link_to I18n.t("navbar.profile"), user_path(current_user) %></li>
+          <li><%= link_to I18n.t("navbar.out"), destroy_user_session_path, method: :delete %></li>
         <%- else -%>
-          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-          <li><%= link_to 'Sign In', new_user_session_path %></li>
+          <li><%= link_to I18n.t("navbar.up"), new_user_registration_path %></li>
+          <li><%= link_to I18n.t("navbar.in"), new_user_session_path %></li>
         <%- end -%>
         <%= content_tag :li do %>
-        <%= link_to 'Switch to English', locale: :en %>
+        <%= link_to I18n.t("navbar.english"), locale: :en %>
         <% end unless current_page?(locale: :en) %>
 
         <%= content_tag :li do %>
-        <%= link_to 'Switch to Spanish', locale: :es %>
+        <%= link_to I18n.t("navbar.spanish"), locale: :es %>
         <% end unless current_page?(locale: :es) %>
       </ul>
     </section>
