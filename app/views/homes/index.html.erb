@@ -1,9 +1,9 @@
 <p class="title-tile"><%= image_tag "erin.png" %></br></br><%= t "genius.title" %></p>
 <!-- <p> Welcome to Ms. McDonald's Genius Maker </p> -->
 <div class="button-tiles">
-  <p class="home-button"><%= link_to I18n.t("genius.khan"), topics_path %></br></br><%= image_tag "khan.jpg" %></p>
-  <p class="home-button"><%= link_to I18n.t("genius.nasa"), nasas_path %></br></br><%= image_tag "NASA-space-science.jpg" %></p>
-  <p class="home-button"><%= link_to I18n.t("genius.classroom"), pictures_path %></br></br><%= image_tag "classroom.jpg" %></p>
-  <p class="home-button"><%= link_to I18n.t("genius.calendar"), meetings_path %></br></br><%= image_tag "calendar-image.jpg" %></p>
-  <p class="home-button"><%= link_to I18n.t("genius.emoji"), weathers_path %></br></br><%= image_tag "weather2.jpg" %></p>
+  <%= link_to topics_path do %><p class="home-button"><%= I18n.t("genius.khan") %></br></br><%= image_tag "khan.jpg" %></p><% end %>
+  <%= link_to nasas_path do %><p class="home-button"><%= I18n.t("genius.nasa") %></br></br><%= image_tag "NASA-space-science.jpg" %></p><% end %>
+  <%= link_to pictures_path do %><p class="home-button"><%= I18n.t("genius.classroom") %></br></br><%= image_tag "classroom.jpg" %></p><% end %>
+  <%= link_to meetings_path do %><p class="home-button"><%= I18n.t("genius.calendar") %></br></br><%= image_tag "calendar-image.jpg" %></p><% end %>
+  <%= link_to weathers_path do %><p class="home-button"><%= I18n.t("genius.emoji") %></br></br><%= image_tag "weather2.jpg" %></p><% end %>
 </div>
