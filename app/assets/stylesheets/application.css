@@ -308,5 +308,6 @@ p:active {
 
 .map-embed {
   width: 95%;
+  height: 80%;
   margin: auto;
 }
