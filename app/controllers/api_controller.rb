@@ -2,8 +2,6 @@ class ApiController < ApplicationController
   protect_from_forgery unless: -> { request.format.json? }
 end
 
-
-# 
 # Fetch Request Options
 # We will also want to add some additional options to our fetch requests so that they are handled by Rails effectively.
 #

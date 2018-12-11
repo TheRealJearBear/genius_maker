@@ -10,14 +10,13 @@ class PicturesController < ApplicationController
   end
 
   def create
-    @picture = Picture.new(picture_params)
-    @picture.user_id = current_user.id
+    @picture = current_user.pictures.create(picture_params)
 
     if @picture.save
       flash[:notice] = "Picture added successfully"
        redirect_to @picture
     else
-      render action: "new"
+      render "new"
     end
   end
 
