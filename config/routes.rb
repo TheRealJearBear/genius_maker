@@ -3,15 +3,15 @@ Rails.application.routes.draw do
     root 'homes#index'
     devise_for :users
     # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-    resources :videos
+    resources :videos, only: [:show, :index]
     resources :nasas, only: [:index]
-    resources :pictures
-    resources :users
-    resources :topics
-    resources :meetings
-    resources :weathers
-    resources :conversations do
-      resources :messages
+    resources :pictures, except: [:edit, :update, :destroy]
+    resources :users, only: [:show, :destroy, :index]
+    resources :topics, only: [:show, :index]
+    resources :meetings, except: [:edit, :update, :destroy]
+    resources :weathers, only: [:index]
+    resources :conversations, only: [:create, :index] do
+      resources :messages, only: [:new, :create, :index]
     end
 
     namespace :api do

@@ -4,7 +4,7 @@ class MessagesController < ApplicationController
   end
 
   def index
-   @messages = @conversation.messages
+    @messages = @conversation.messages
     if @messages.length > 10
      @over_ten = true
      @messages = @messages[-10..-1]
@@ -37,5 +37,4 @@ private
    def message_params
     params.require(:message).permit(:body, :user_id)
    end
-   
 end

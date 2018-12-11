@@ -10,14 +10,13 @@ class MeetingsController < ApplicationController
   end
 
   def create
-    @meeting = Meeting.new(meeting_params)
-    @meeting.user_id = current_user.id
+    @meeting = current_user.meetings.create(meeting_params)
 
     if @meeting.save
       flash[:notice] = "Meeting added successfully"
        redirect_to @meeting
     else
-      render action: "new"
+      render "new"
     end
   end
 
