@@ -316,3 +316,14 @@ p:active {
 .space-mission-tile {
   color: black;
 }
+
+.new_user {
+  width: 50%;
+  margin: auto;
+}
+
+@media (max-width: 60rem) {
+  .new_user {
+    width: 80%;
+  }
+}
