@@ -16,9 +16,10 @@ class UsersController < ApplicationController
   end
 
   private
-  def user_params
-    params.require(:user).permit(:username, :first_name, :last_name, :email, :date_of_birth, :user_photo)
-  end
+  ##I've commented this out as I might need it in the future?
+  # def user_params
+  #   params.require(:user).permit(:username, :first_name, :last_name, :email, :date_of_birth, :user_photo)
+  # end
 
   def authorize_user
     if !current_user.superadmin_role
